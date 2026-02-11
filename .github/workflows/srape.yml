@@ -22,7 +22,9 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run scraper
-        run: python scraper/scraper.py
+        run: |
+          cd scraper
+          python scraper.py
 
       - name: Commit and push CSV
         run: |
